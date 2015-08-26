@@ -1,0 +1,22 @@
+{
+	"vend_api":
+		{
+			"refresh_token": "",
+			"client_id": "",
+			"client_secret": ""
+		},
+	"xero_api":
+		{
+			"consumer_key": "",
+			"consumer_secret": "",
+			"private_key_path": "/Users/admin/.ssh/keys/Xero/privatekey."
+		},
+	"database":
+		{
+			"type":"",
+			"username":"",
+			"password":"",
+			"host":"",
+			"schema":""
+		}
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vend and Xero integration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+
+  <script src="js/app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <a class="brand" href="#">Vend/Xero Integration</a>
+      </div>
+    </div>
+
+    <h2>Get data from Vend</h2>
+    <hr>
+    <h4> Pick the date range: </h4>
+    <p>
+      <input type="text" name="date" id="start_date">
+      to
+      <input type="text" name="date" id="end_date">
+    </p>
+    <button class="btn" type="button" id="get_sales">Get Sales by tag</button>
+    <hr>
+    <h4>Sales data</h4>
+    <table class="table">
+      <tr>
+        <th>
+          Tag
+        </th>
+        <th>
+          Sales total
+        </th>
+      </tr>
+      <tr>
+        <td>
+          fda
+        </td>
+        <td>
+          fads
+        </td>
+      </tr>
+    </table>
+  </div>
+  </div>
+
+</body>
+
+</html>
