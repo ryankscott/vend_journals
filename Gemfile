@@ -1,11 +1,11 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-require 'sinatra'
-require 'rubygems'
-require 'data_mapper'
-require 'dm-migrations'
-require 'typhoeus'
-require 'xeroizer'
-require 'pmap'
-require 'dm-sqlite-adapter'
+gem 'sinatra'
+gem 'data_mapper'
+gem 'dm-migrations'
+gem 'typhoeus'
+gem 'xeroizer'
+gem 'pmap'
+gem 'dm-sqlite-adapter'
+gem 'dm-postgres-adapter'
