@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'data_mapper'
 require 'dm-migrations'
+require 'dm-zone-types'
 require_relative 'properties.rb'
 
 DataMapper::Logger.new($stdout, :error)
@@ -27,8 +28,8 @@ class Product
   property :handle,       String, :length => 100
   property :name,         String, :length => 100
   property :description,  Text
-  property :inserted_at,  DateTime
-  property :updated_at,   DateTime
+  property :inserted_at,  ZonedTime
+  property :updated_at,   ZonedTime
   belongs_to :tag
   has n, :register_sale_product, :required => true
   storage_names[:default] = 'product'
@@ -38,7 +39,7 @@ class Tag
   include DataMapper::Resource
   property :id,           Serial
   property :tag_name,     String, :length => 100, :unique => true, :index => true
-  property :inserted_at,  DateTime
+  property :inserted_at,  ZonedTime
   has n, :product, :required => true
   storage_names[:default] = 'tag'
 end
@@ -49,11 +50,11 @@ class RegisterSale
   property :id, 		            Serial
   property :register_sale_id, 	UUID, :unique => true, :required => true
   property :register_id,        UUID, :required => true
-  property :sale_date, 		      DateTime, :required => true, :index => true
+  property :sale_date, 		      ZonedTime, :required => true, :index => true
   property :total_price,	      Float
   property :total_tax,  	      Float
   property :status,		          String, :length => 100
-  property :inserted_at,        DateTime
+  property :inserted_at,        ZonedTime
   has n, :register_sale_product, :required => true
   storage_names[:default] = 'register_sale'
 end

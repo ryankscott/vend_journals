@@ -24,3 +24,6 @@ RUN /etc/init.d/postgresql start && \
     createdb -O admin vend_journals
 
 USER root
+RUN service postgresql start
+
+EXPOSE 4567
