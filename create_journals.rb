@@ -489,10 +489,5 @@ def get_average_sale_price_by_month_for_year(register_id, year)
 refresh_token()
 
 # Schedule this to happen every day
-Thread.new do
-  while true do
-		save_products_and_tags(get_products(false))
-		save_sales(get_sales(false))
-    sleep 1*60*60*24
-  end
-end
+save_products_and_tags(get_products(false))
+save_sales(get_sales(false))
