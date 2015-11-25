@@ -4,7 +4,6 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'data_mapper'
 gem 'datamapper'
-gem 'sinatra'
 gem 'dm-migrations'
 gem 'typhoeus'
 gem 'xeroizer'

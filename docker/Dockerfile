@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:15.04
 MAINTAINER Ryan Scott
 
 RUN apt-get update
