@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'data_mapper'
 require 'dm-migrations'
-require 'dm-zone-types'
 require_relative 'properties.rb'
 
 DataMapper::Logger.new($stdout, :error)
