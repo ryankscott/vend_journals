@@ -89,7 +89,7 @@ def save_products_and_tags(product_pages)
 					:inserted_at => Time.now,
 					:tag => tag)
 					db_product.save
-					$log.info("Saving product with name #{product["name"]} , handle #{product["handle"]} and product_id #{product["id"]}")
+					$log.info("Saving product with name #{product["name"]} , handle #{product["handle"]} and product_id #{product["id"]} and updated at #{product["updated_at"]}")
 			rescue DataMapper::SaveFailureError => saveError
 				$log.error("Couldn't save product with name #{product["name"]} , handle #{product["handle"]} and product_id #{product["id"]}")
 			rescue DataObjects::IntegrityError => integrityError
@@ -118,7 +118,7 @@ def save_sales(sales_pages)
 					:inserted_at => Time.now}
 				)
 				db_sale.save
-				$log.info("Saving sale with sale_id #{register_sale["id"]}")
+				$log.info("Saving sale with sale_id #{register_sale["id"]} at #{register_sale["sale_date"]}")
 			rescue DataMapper::SaveFailureError => saveError
 				$log.error("Couldn't save sale with sale_id #{register_sale['id']} - #{saveError}}")
 			rescue DataObjects::IntegrityError => integrityError
